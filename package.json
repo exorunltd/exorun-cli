@@ -1,0 +1,27 @@
+{
+  "name": "Exorun",
+  "version": "1.0.2",
+  "description": "Exorun command line interface",
+  "main": "./bin/exorun.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "bin": {
+    "exo": "./bin/exorun.js"
+  },
+  "repository": "git://github.com/exorunltd/exorun-cli.git",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "commander": "^2.19.0",
+    "prompt": "^1.0.0",
+    "exorun-api": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/exorunltd/exorun-cli/issues"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "author": "Kenneth Iversen",
+  "license": "ISC"
+}
