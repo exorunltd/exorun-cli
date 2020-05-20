@@ -1,6 +1,6 @@
 # Exorun CLI
 
-![exorun logo](https://avatars0.githubusercontent.com/u/65603591?s=200&v=4)
+![exorun logo](https://avatars0.githubusercontent.com/u/65603591?s=200&v=3)
 
 [![Build Status](https://travis-ci.com/exorunltd/exorun-cli.svg?branch=master)](https://travis-ci.com/exorunltd/exorun-cli)
 ![npm](https://img.shields.io/npm/v/exorun-cli)
