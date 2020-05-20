@@ -18,9 +18,9 @@ npm install -g exorun-cli
 
 # Issues
 
-For problems directly related to the CLI, [add an issue on GitHub](https://github.com/exorunio/exorun-cli/issues/new).
+For problems directly related to the CLI, [add an issue on GitHub](https://github.com/exorunltd/exorun-cli/issues/new).
 
-[Contributors](https://github.com/exorunio/exorun-cli/contributors)
+[Contributors](https://github.com/exorunltd/exorun-cli/contributors)
 
 # Commands
 
