@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
-const auth = require("../modules/auth");
-const app = require("../modules/app");
-const templates = require("../modules/templates");
+//const auth = require("./auth");
+const app = require("./app");
+const templates = require("./templates");
 const commander = require("commander");
 commander
     .command("login")

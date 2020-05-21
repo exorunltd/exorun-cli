@@ -1,8 +1,21 @@
 language: node_js
 node_js:
   - "12.13"
-
+after_success:
+ - npm run build
+ - npm run package
 deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_API_KEY
+ - provider: releases
+   edge: true
+   api_key:
+      secure: $GITHUB_TOKEN
+    file:
+      - 'exorun-linux'
+      - 'exorun-macos'
+      - 'exorun-win.exe'
+    on:
+      tags: true
+      repo: exorunltd/exorun-cli
+  - provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_API_KEY

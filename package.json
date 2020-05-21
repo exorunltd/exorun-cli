@@ -1,27 +1,31 @@
 {
   "name": "exorun-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Exorun command line interface",
-  "main": "./bin/exorun.js",
-  "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha"
-  },
+  "main": "dist/index.js",
   "bin": {
-    "exo": "./bin/exorun.js"
+    "exorun": "dist/index.js"
   },
+  "scripts": {
+    "build": "ncc build bin/index.js -o dist",
+    "package": "pkg --targets node12.2.0-linux-x64,node12.2.0-win-x64,node12.2.0-macos-x64 -o exorun dist/index.js"
+  },
+  "author": "Kenneth Iversen",
+  "license": "ISC",
   "repository": "git://github.com/exorunltd/exorun-cli.git",
-  "dependencies": {
-    "ascii-table": "^0.0.9",
-    "commander": "^2.19.0",
-    "prompt": "^1.0.0",
-    "exorun-api": "^1.0.0"
-  },
   "bugs": {
     "url": "https://github.com/exorunltd/exorun-cli/issues"
   },
-  "devDependencies": {
-    "mocha": "^5.2.0"
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "commander": "^5.1.0",
+    "exorun-api": "^1.0.0",
+    "prompt": "^1.0.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2"
   },
-  "author": "Kenneth Iversen",
-  "license": "ISC"
+  "devDependencies": {
+    "pkg": "^4.4.8",
+    "@zeit/ncc": "^0.21.0"
+  }
 }
