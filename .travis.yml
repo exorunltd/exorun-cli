@@ -7,9 +7,8 @@ after_success:
 deploy:
  - provider: releases
    edge: true
-   api_key:
-      secure: $GITHUB_TOKEN
-    file:
+   api_key: $GITHUB_TOKEN
+   file:
       - 'exorun-linux'
       - 'exorun-macos'
       - 'exorun-win.exe'
