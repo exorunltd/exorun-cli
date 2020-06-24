@@ -1,4 +1,4 @@
-//const auth = require("./auth");
+const auth = require("./auth");
 const app = require("./app");
 const templates = require("./templates");
 const commander = require("commander");
