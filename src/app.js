@@ -15,8 +15,17 @@ const create = function (appname, region = "") {
   if (user.getToken()) {
     nodeapi.setToken(user.getToken());
     nodeapi.CreateInstance(appname, region, (result) => {
-      if (result.success == true) {
+      if (result.success == "true") {
         console.log("Creating " + appname + "... done");
+        console.log(result.app_url + " | " + result.repo);
+        if (exists(".git")) {
+          exec("git remote add exorun " + result.repo);
+          console.log("Git remote exorun added");
+        } else {
+          exec("git init");
+          exec("git remote add exorun " + result.repo);
+          console.log("Git remote exorun added");
+        }
       } else {
         console.log(result.message);
       }
@@ -43,8 +52,9 @@ const _delete = function (name) {
   if (user.getToken()) {
     nodeapi.setToken(user.getToken());
     nodeapi.DeleteInstance(name, (result) => {
-      if (result.success == true) {
-        console.log(name + "has been deleted");
+
+      if (result.status == 'success') {
+        console.log(name + " has been deleted");
       }
     });
   }

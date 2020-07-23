@@ -21,7 +21,7 @@ const getToken = function () {
         var token = fs.readFileSync(config_file).toString();
         return token;
     } else {
-        console.log("You need to run exo login");
+        console.log("You need to run exorun login");
     }
 };
 const deleteConfig = function () {
